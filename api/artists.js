@@ -29,4 +29,8 @@ artistsRouter.get('/', (req, res, next) => {
     })
 })
 
+artistsRouter.get('/:artistId', (req, res, next) => {
+    
+})
+
 module.exports = artistsRouter;
