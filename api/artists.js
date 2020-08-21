@@ -45,7 +45,7 @@ artistsRouter.post('/', (req, res, next) => {
         $dateOfBirth: dateOfBirth,
         $biography: biography,
         $isCurrentlyEmployed: isCurrentlyEmployed
-    }
+    };
 
     if (!name || !dateOfBirth || !biography) {
         return res.sendStatus(400);
