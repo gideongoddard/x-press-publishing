@@ -2,7 +2,7 @@ const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('./database.sqlite');
 
 db.serialize(() => {
-    db.run("DROP TABLE IF EXISTS Artist");
+    db.run('DROP TABLE IF EXISTS Artist');
     db.run(`CREATE TABLE Artist (
         id INTEGER PRIMARY KEY NOT NULL,
         name TEXT NOT NULL,
