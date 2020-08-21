@@ -14,4 +14,16 @@ db.serialize(() => {
         name TEXT NOT NULL,
         description TEXT NOT NULL
     )`);
+    db.run(`CREATE TABLE IF NOT EXISTS Issue (
+        id INTEGER PRIMARY KEY NOT NULL,
+        name TEXT NOT NULL,
+        issue_number INTEGER NOT NULL,
+        publication_date INTEGER NOT NULL,
+        artist_id INTEGER NOT NULL,
+        series_id INTEGER NOT NULL,
+        FOREIGN KEY (artist_id)
+            REFERENCES Artist (artist_id)
+        FOREIGN KEY (series_id)
+            REFERENCES Series (series_id)
+    )`)
 })
